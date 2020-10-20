@@ -89,7 +89,6 @@ public class Client extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         list.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -98,10 +97,7 @@ public class Client extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(list);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 45, 688, 142));
-
         listFileBtn.setText("List File from server");
-        getContentPane().add(listFileBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 202, -1, -1));
 
         r1.setSelected(true);
         r1.setText("Normal Mode");
@@ -110,10 +106,8 @@ public class Client extends javax.swing.JFrame {
                 r1ActionPerformed(evt);
             }
         });
-        getContentPane().add(r1, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 263, -1, -1));
 
         r2.setText("Zero copy");
-        getContentPane().add(r2, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 286, -1, -1));
 
         downloadBtn.setText("Download");
         downloadBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -121,31 +115,22 @@ public class Client extends javax.swing.JFrame {
                 downloadBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(downloadBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(617, 273, -1, -1));
 
         jLabel1.setText("File name : none select");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
 
         jLabel2.setText("Time");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 402, -1, -1));
 
         jLabel3.setText(" Time :");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(466, 402, -1, -1));
 
         jLabel4.setText("none");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 402, -1, -1));
 
         jLabel5.setText("none");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 402, -1, -1));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 263, 10, 89));
 
         jLabel6.setText("Normal Mode");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 382, -1, -1));
 
         jLabel7.setText("Zero copy");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 382, -1, -1));
 
         locatonFileDownloadBtn.setText("Save as");
         locatonFileDownloadBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -153,13 +138,93 @@ public class Client extends javax.swing.JFrame {
                 locatonFileDownloadBtnActionPerformed(evt);
             }
         });
-        getContentPane().add(locatonFileDownloadBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 273, -1, -1));
 
         jLabel8.setText("File info");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(66, 264, -1, -1));
 
         size.setText("File size : unkhow");
-        getContentPane().add(size, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(318, 318, 318)
+                .addComponent(listFileBtn))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(size))))
+                .addGap(107, 107, 107)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(r1)
+                    .addComponent(r2))
+                .addGap(114, 114, 114)
+                .addComponent(locatonFileDownloadBtn)
+                .addGap(10, 10, 10)
+                .addComponent(downloadBtn))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(66, 66, 66)
+                .addComponent(jLabel6)
+                .addGap(207, 207, 207)
+                .addComponent(jLabel7))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(95, 95, 95)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addGap(307, 307, 307)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(listFileBtn)
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabel8)
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel1)
+                        .addGap(6, 6, 6)
+                        .addComponent(size))
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(r1)
+                        .addGap(0, 0, 0)
+                        .addComponent(r2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(locatonFileDownloadBtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(downloadBtn)))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5)))
+        );
 
         pack();
     }// </editor-fold>                        
